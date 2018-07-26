@@ -12,6 +12,7 @@ def take_a_break(amount_of_breaks):
     print(start_message)
 
     while break_count < total_breaks:
+        break_music = links[random.randint(1,3)]
         time.sleep(time_in_seconds)
         webbrowser.open(break_music)
 
@@ -23,7 +24,15 @@ def take_a_break(amount_of_breaks):
 # === SET THE VARIABLE VALUES BELOW ===
 start_message = "Hi! This program started on " + time.ctime()
 time_in_seconds = (2 * (60 * 60))
-break_music = "https://www.youtube.com/watch?v=vKikM_W_Fpk"
+
+links = {
+    1: "https://www.youtube.com/watch?v=vKikM_W_Fpk",
+    2: "https://www.youtube.com/watch?v=x0-v2k14I-Q",
+    3: "https://www.youtube.com/watch?v=OHz1fCSHTLA",
+    4: "https://www.youtube.com/watch?v=MPa-kWJhnvA",
+    5: "https://www.youtube.com/watch?v=091nrE66kpg"
+}
+
 motivational_statement = "We kicked ass today...and danced! Good job! :)"
 
 # === CALL UP THE FUNCTION ===
